@@ -193,7 +193,6 @@ The cost function calculates the number of pairs of queens attacking each other 
 - **Heuristic / Cost Function:** Calculates the number of attacking queen pairs.
 - **Temperature:** Controls the probability of accepting worse neighboring states and gradually decreases during the search.
 
-# 1BM24CS314_AI_LAB
 
 ## AI Lab – Week 6
 
