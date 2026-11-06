@@ -193,6 +193,81 @@ The cost function calculates the number of pairs of queens attacking each other 
 - **Heuristic / Cost Function:** Calculates the number of attacking queen pairs.
 - **Temperature:** Controls the probability of accepting worse neighboring states and gradually decreases during the search.
 
+# 1BM24CS314_AI_LAB
+
+## AI Lab – Week 6
+
+### 1. Knowledge Base Using Propositional Logic
+
+Propositional Logic is a branch of Artificial Intelligence used to represent knowledge using logical statements that can have either True or False values. A Knowledge Base (KB) is created by combining multiple logical statements using operators such as AND, OR, NOT, and Implication.
+
+In this program, three propositions (Q, P, and R) are used to construct a Knowledge Base consisting of the following statements:
+
+- Q → P
+- P → ¬Q
+- Q ∨ R
+
+The complete Knowledge Base is represented as:
+
+**KB = (Q → P) ∧ (P → ¬Q) ∧ (Q ∨ R)**
+
+### 2. Truth-Table Enumeration Algorithm
+
+Truth-Table Enumeration is an algorithm used to determine whether a given query is logically entailed by a Knowledge Base. It generates all possible truth-value combinations of the propositions and evaluates each combination.
+
+Since the program contains three propositions (Q, P, and R), the total number of possible combinations is:
+
+**2³ = 8**
+
+The program uses Python's `itertools.product()` function to generate all eight combinations. It evaluates the individual logical statements, constructs the complete Knowledge Base, and generates a truth table.
+
+### 3. Checking Logical Entailment
+
+Logical Entailment determines whether a query is guaranteed to be true whenever the Knowledge Base is true.
+
+It is represented as:
+
+**KB ⊨ Query**
+
+The program evaluates the following three queries:
+
+1. **Query 1:** R
+2. **Query 2:** R → P
+3. **Query 3:** Q → R
+
+The entailment algorithm checks whether any truth assignment exists where the Knowledge Base is True but the selected query is False.
+
+- If such an assignment exists, the query is not entailed.
+- Otherwise, the Knowledge Base entails the query.
+
+### AI Concepts Used
+
+- **Propositional Logic:** Represents statements using True and False values.
+- **Knowledge Base:** Stores logical facts and rules used for reasoning.
+- **Logical Operators:** Uses AND, OR, NOT, and Implication to construct logical expressions.
+- **Truth Table:** Represents all possible truth-value combinations of propositions.
+- **Truth-Table Enumeration:** Checks every possible assignment to determine logical entailment.
+- **Logical Entailment:** Determines whether a query logically follows from the Knowledge Base.
+- **Model:** A truth assignment that satisfies the complete Knowledge Base.
+- **Counterexample:** A model where the Knowledge Base is True but the query is False.
+
+### Complexity Analysis
+
+- **Time Complexity:** O(2ⁿ × m), where n is the number of propositions and m is the size of the Knowledge Base.
+- **Space Complexity:** O(n + m) auxiliary space for the iterator-based implementation.
+
+### Conclusion
+
+This lab demonstrates the implementation of a Knowledge Base using Propositional Logic and the Truth-Table Enumeration algorithm in Python. All possible truth-value combinations are generated and evaluated to determine whether the given queries are logically entailed by the Knowledge Base.
+
+The final results are:
+
+- **KB entails R:** True
+- **KB entails R → P:** False
+- **KB entails Q → R:** True
+
+Thus, the experiment successfully demonstrates how Artificial Intelligence uses logical reasoning and truth-table enumeration to represent knowledge and verify conclusions.
+
 ### Conclusion
 
 This lab demonstrates the implementation of the Simulated Annealing Algorithm to solve the 8-Queens problem. It helps understand probabilistic search, optimization techniques, and how temperature-based exploration helps overcome local minima.
