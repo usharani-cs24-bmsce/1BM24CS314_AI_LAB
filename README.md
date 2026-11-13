@@ -270,3 +270,65 @@ Thus, the experiment successfully demonstrates how Artificial Intelligence uses 
 ### Conclusion
 
 This lab demonstrates the implementation of the Simulated Annealing Algorithm to solve the 8-Queens problem. It helps understand probabilistic search, optimization techniques, and how temperature-based exploration helps overcome local minima.
+# AI Lab – Week 7
+
+## 1. Unification in First-Order Logic
+
+Unification is a technique in Artificial Intelligence used to make two logical expressions identical by finding suitable substitutions for variables.
+
+Example:
+
+- Expression 1: `Eats(x, Apple)`
+- Expression 2: `Eats(Riya, y)`
+
+Substitutions:
+- `x = Riya`
+- `y = Apple`
+
+Final Expression: `Eats(Riya, Apple)`
+
+## 2. Unification Algorithm
+
+The algorithm compares two expressions recursively and performs the following steps:
+
+1. Check whether both expressions are identical.
+2. Identify variables and perform substitutions.
+3. Perform the occurs check.
+4. Check predicate symbols.
+5. Check the number of arguments.
+6. Compare arguments recursively.
+7. Return the substitution set or FAILURE.
+
+## 3. Successful and Failed Unification
+
+The program checks the following cases:
+
+- `Eats(x, Apple)` and `Eats(Riya, y)` – Success.
+- `P(x, a)` and `Q(b, y)` – Predicate mismatch.
+- `P(x, y)` and `P(a, b, c)` – Argument mismatch.
+- `P(x)` and `P(f(x))` – Occurs check failure.
+- `P(a)` and `P(b)` – Constant mismatch.
+- `P(x, x)` and `P(a, b)` – Conflicting substitutions.
+
+## 4. AI Concepts Used
+
+- First-Order Logic (FOL)
+- Unification and Substitution
+- Most General Unifier (MGU)
+- Occurs Check
+- Recursion
+- Predicate Matching
+- Substitution Set (SUBST)
+
+## 5. Complexity Analysis
+
+- **Time Complexity:** O(n²) for the simple recursive implementation.
+- **Space Complexity:** O(n).
+
+Here, n represents the total number of nodes in the logical expressions.
+
+## 6. Conclusion
+
+This lab demonstrates the implementation of the Unification Algorithm using Python. It explains how logical expressions are compared recursively and how suitable substitutions are generated.
+
+The program demonstrates both successful and failed unification cases and helps understand how AI uses unification for logical reasoning in First-Order Logic.
